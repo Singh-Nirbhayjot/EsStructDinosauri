@@ -75,27 +75,27 @@ class Program
                     RiempiRecinto(recinto);
                     break;
                 case "2":
-                    if (!pieno) WriteLine("Prima riempi il recinto!");
+                    if (!pieno) WriteLine("Prima riempi il recinto");
                     else ScambiaDinosauro(recinto);
                     break;
                 case "3":
-                    if (!pieno) WriteLine("Prima riempi il recinto!");
+                    if (!pieno) WriteLine("Prima riempi il recinto");
                     else ScambiaProprietari(recinto);
                     break;
                 case "4":
-                    if (!pieno) WriteLine("Prima riempi il recinto!");
+                    if (!pieno) WriteLine("Prima riempi il recinto");
                     else Visualizza(recinto);
                     break;
                 case "5":
-                    if (!pieno) WriteLine("Prima riempi il recinto!");
+                    if (!pieno) WriteLine("Prima riempi il recinto");
                     else FiltraPerTipo(recinto);
                     break;
                 case "6":
-                    if (!pieno) WriteLine("Prima riempi il recinto!");
+                    if (!pieno) WriteLine("Prima riempi il recinto");
                     else FiltraPerTaglia(recinto);
                     break;
                 case "e":
-                    WriteLine("Arrivederci da Bedrock! Yabadabaduu!");
+                    WriteLine("Arrivederci da Bedrock ");
                     break;
             }
 
@@ -158,7 +158,7 @@ class Program
             recinto[i] = new Dinosauro(codice, tipo, taglia, eta, forza, proprietario);
         }
         pieno = true;
-        WriteLine("Recinto pieno! Yabadabaduu!");
+        WriteLine("Recinto pieno");
     }
 
     // SCAMBIA DINOSAURO 
@@ -218,7 +218,7 @@ class Program
         string proprietario = ReadLine();
 
         recinto[pos] = new Dinosauro(codice, tipo, taglia, eta, forza, proprietario);
-        WriteLine("Sostituzione fatta!");
+        WriteLine("Sostituzione fatta");
     }
 
     //SCAMBIA PROPRIETARI 
@@ -234,7 +234,7 @@ class Program
         int posTipo = CercaCodice(recinto, cod1);
         if (posTipo == -1)
         {
-            WriteLine("Primo dinosauro non trovato!");
+            WriteLine("Primo dinosauro non trovato");
             return;
         }
 
@@ -246,7 +246,7 @@ class Program
         int posTaglia = CercaCodice(recinto, cod2);
         if (posTaglia == -1)
         {
-            WriteLine("Secondo dinosauro non trovato!");
+            WriteLine("Secondo dinosauro non trovato");
             return;
         }
 
@@ -254,7 +254,7 @@ class Program
         recinto[posTipo].proprietario = recinto[posTaglia].proprietario;
         recinto[posTaglia].proprietario = temp;
 
-        WriteLine("Proprietari scambiati!");
+        WriteLine("Proprietari scambiati");
     }
 
     //   VISUALIZZA TUTTI 
